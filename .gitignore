@@ -4,7 +4,7 @@ db.sqlite3
 *.log
 *.swp
 *.retry
-.venv
+/.venv
 /logs
 /data
 .~*

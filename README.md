@@ -16,3 +16,5 @@ pip install wagtail
 pip install -r requirements.txt 
 
 python3 manage.py runserver
+
+melvyn, admin

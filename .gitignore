@@ -1,0 +1,12 @@
+Dockerfile
+*.pyc
+*.log
+*.swp
+*.retry
+.venv
+/logs
+/data
+.~*
+common/CACHE
+__pycache__
+!.gitignore

@@ -6,6 +6,8 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
+from django.urls import path
+
 from search import views as search_views
 
 urlpatterns = [
@@ -15,8 +17,14 @@ urlpatterns = [
     path("search/", search_views.search, name="search"),
 ]
 
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
 
 if settings.DEBUG:
+    import debug_toolbar
     from django.conf.urls.static import static
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 

@@ -15,6 +15,15 @@ pip install wagtail
 
 pip install -r requirements.txt 
 
+python3 -m pip install django-debug-toolbar
+
+python3 manage.py migrate
+
+python3 manage.py createsuperuser
+user/password: melvyn/admin
+
+python3 manage.py createcachetable
+
 python3 manage.py runserver
 
-melvyn, admin
+
